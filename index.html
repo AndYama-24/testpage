@@ -105,7 +105,7 @@
   cursor: pointer;
   border-radius: 7px;
   transition: background-color 0.3s;
-  font-weight: bold;
+ ; font-weight: bold
   
 }
 
@@ -128,7 +128,47 @@
 }
 
 
+ /* Estilo do botão */
+ .buttonmenu {
+            padding: 6px 40px;
+            background-color: #ffffff;
+            color: rgb(7, 15, 83);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 7px;
+            font-weight: bold;
+            margin: 4px 2px;
+        }
 
+        /* Estilo do menu horizontal */
+        .menu {
+            display: none;
+            background-color: #000080;
+            border: 1px solid #ddd;
+            padding: 5px;
+            position: absolute;
+            top: 0;
+            left: 170px;
+            border-radius: 7px;
+            white-space: nowrap;
+            
+        }
+
+        .menu a {
+            display: inline-block;
+            padding: 6px 40px;
+            color: #ffffff;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 7px;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
+            color: rgb(4, 5, 73);
+        }
 
     </style>
 </head>
@@ -155,6 +195,25 @@
         <a href="https://andyama-24.github.io/testpage/">  <button class="button button1">Home</button></a>
         <a href="https://google.com">  <button class="button button1">Botão 1</button></a>
         <a href="https://youtube.com"> <button class="button button2">Botão 2</button></a>
+
+        <div style="position: relative;">
+            <button class="buttonmenu" onclick="toggleMenu()">Abrir Menu</button>
+        
+            <!-- Menu horizontal ao lado do botão -->
+            <div class="menu" id="menu">
+                <a href="https://pt.wikipedia.org/" target="_blank">Opção 1</a>
+                <a href="https://pt.wikipedia.org/" target="_blank">Opção 2</a>
+                <a href="https://pt.wikipedia.org/" target="_blank">Opção 3</a>
+                <a href="https://pt.wikipedia.org/" target="_blank">Opção 4</a>
+            </div>
+        </div>
+        
+        <!-- Caixa de conteúdo responsiva -->
+        <div class="content-box" id="contentBox" style="display: none;">
+            <p id="contentText">Aqui o conteúdo será exibido</p>
+        </div>
+
+
     </div>
 
     <div class="div1"></div>
@@ -242,6 +301,21 @@
     }
 
     setInterval(autoSlide, 3000); // Altera a imagem a cada 3 segundos
+
+      // Função para abrir e fechar o menu
+      function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Função para mostrar conteúdo na caixa abaixo (mantida para referência)
+    function showContent(content) {
+        const contentBox = document.getElementById('contentBox');
+        const contentText = document.getElementById('contentText');
+        
+        contentText.textContent = content;
+        contentBox.style.display = 'block';
+    }
 </script>
 </body>
 </html>
