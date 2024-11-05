@@ -128,48 +128,68 @@
 }
 
 
- /* Estilo do botão */
- .buttonmenu {
-            padding: 6px 40px;
-            background-color: #ffffff;
-            color: rgb(7, 15, 83);
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 7px;
-            font-weight: bold;
-            margin: 4px 2px;
+    /* Estilo do botão */
+    .buttonmenu {
+        border: none;
+  color: rgb(7, 15, 83);
+  padding: 6px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: background-color 0.3s;
+ ; font-weight: bold
         }
 
-        /* Estilo do menu horizontal */
+        /* Estilo do menu */
         .menu {
-            display: none;
-            background-color: #000080;
-            border: 1px solid #ddd;
-            padding: 5px;
-            position: absolute;
-            top: 0;
-            left: 170px;
+            display: none; /* Escondido inicialmente */
+            background-color: #ffffff;
+            border: 1px solid #000080;
+            position: absolute; /* Mantém o menu posicionado em relação ao botão */
+            top: 50px; /* Abaixo do botão */
+            left: 0; /* Alinhado à esquerda do botão */
             border-radius: 7px;
-            white-space: nowrap;
-            
+            width: 170px; /* Largura do menu */
+            z-index: 1; /* Para garantir que o menu fique acima de outros elementos */
         }
 
         .menu a {
-            display: inline-block;
-            padding: 6px 40px;
-            color: #ffffff;
-            text-decoration: none;
-            cursor: pointer;
+            display: block; /* Cada link ocupará toda a largura do menu */
+            padding: 6px 40px; /* Espaçamento interno */
+            color: #000080;
+            text-decoration: none; /* Remove o sublinhado */
             font-weight: bold;
             border-radius: 7px;
+            margin: 4px 2px;
         }
 
         .menu a:hover {
-            background-color: #ddd;
-            color: rgb(4, 5, 73);
+            background-color: #000080; /* Efeito de hover para os links */
+            color: #ffffff;
         }
 
+        /* Caixa de conteúdo responsiva */
+        .content-box {
+            display: none; /* Escondido inicialmente */
+            background-color: #000080;
+            border: 7px solid #ddd;
+            padding: 6px 80px;
+            width: 100%;
+            max-width: 500px;
+            margin: 3px auto; /* Margem automática para centralização */
+            border-radius: 7px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Mostra a content-box quando o conteúdo é carregado */
+        .content-box.show {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -193,8 +213,7 @@
 
     <div style="display: flex; justify-content: center; align-items: center; height: 30px;">   
         <a href="https://andyama-24.github.io/testpage/">  <button class="button button1">Home</button></a>
-        <a href="https://google.com">  <button class="button button1">Botão 1</button></a>
-        <a href="https://youtube.com"> <button class="button button2">Botão 2</button></a>
+
 
         <div style="position: relative;">
             <button class="buttonmenu" onclick="toggleMenu()">Abrir Menu</button>
@@ -213,6 +232,11 @@
             <p id="contentText">Aqui o conteúdo será exibido</p>
         </div>
 
+
+        <a href="https://google.com">  <button class="button button1">Botão 1</button></a>
+        <a href="https://youtube.com"> <button class="button button2">Botão 2</button></a>
+
+   
 
     </div>
 
