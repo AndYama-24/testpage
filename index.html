@@ -109,8 +109,25 @@
   
 }
 
+.button3 {
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: background-color 0.3s;
+ ; font-weight: bold
+  
+}
+
 .button1 {background-color: #ffffff;} /* zu1 */
 .button2 {background-color: #ffffff;} /* zu1 */
+.button3 {background-color: #000080;} /* zu1 */
 
 .button:hover {
     background-color: rgb(7, 15, 83); 
@@ -143,6 +160,13 @@
   transition: background-color 0.3s;
  ; font-weight: bold
         }
+
+
+        .buttonmenu:hover {
+    background-color: rgb(7, 15, 83); 
+    color: rgb(255, 255, 255);
+
+}/* Cor ao passar o mouse */
 
         /* Estilo do menu */
         .menu {
@@ -266,6 +290,8 @@
 </div>
 
 <div class="container">
+
+    <a href="https://andyama-24.github.io/testpage/">  <button class="button button3"> << </button></a>
     <h2>Container 1</h2>
     <p>Conteúdo do primeiro contêiner.</p>
     <button class="botao" onclick="abrirLink()">Clique Aqui para Abrir a Página</button> <!-- Botão com função -->
