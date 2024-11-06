@@ -214,6 +214,30 @@
         .content-box.show {
             display: block;
         }
+
+
+        .containerLateral {
+    display: flex; /* Define o layout em linha */
+    gap: 2px; /* Espaço entre os containers */
+}
+
+.box 
+    {
+            border: 7px solid #000080;
+            flex: 1;
+            border-radius: 15px;
+            margin: 15px;
+            padding: 15px;
+            background-color: #ffffff;
+            width: fit-content;
+            max-width: 1000px;
+            text-align: center;
+            text-decoration: none; /* Remove o sublinhado */
+            font-weight: bold;
+        }
+
+
+        
     </style>
 </head>
 <body>
@@ -256,14 +280,38 @@
             <p id="contentText">Aqui o conteúdo será exibido</p>
         </div>
 
-
         <a href="https://google.com">  <button class="button button1">Botão 1</button></a>
         <a href="https://youtube.com"> <button class="button button2">Botão 2</button></a>
 
-   
-
     </div>
+    <div class="containerLateral">
+        <div class="box">
 
+         <img src="https://github.com/AndYama-24/testpage/blob/main/senac.png?raw=true" alt="logo01">
+
+         <h1>Container 1</h1>
+        </div>
+        <div class="box">
+            
+            <img src="https://github.com/AndYama-24/testpage/blob/main/masternet.png?raw=true" alt="logo02">
+            
+            <h1>Container 2</h1>
+        
+        </div>
+        <div class="box">
+            <img src="https://github.com/AndYama-24/testpage/blob/main/masternet.png?raw=true" alt="logo03">
+            
+            <h1>Container 3</h1>
+        </div>
+        <div class="box">
+            <img src="https://github.com/AndYama-24/testpage/blob/main/masternet.png?raw=true" alt="logo04">
+            
+            <h1>Container 4</h1>
+        </div>
+        <div class="box"><img src="https://github.com/AndYama-24/testpage/blob/main/masternet.png?raw=true" alt="logo05">
+            
+            <h1>Container 5</h1></div>
+    </div>
     <div class="div1"></div>
 <div class="container">
     <h2>Container 0</h2>
@@ -295,7 +343,13 @@
     <h2>Container 1</h2>
     <p>Conteúdo do primeiro contêiner.</p>
     <button class="botao" onclick="abrirLink()">Clique Aqui para Abrir a Página</button> <!-- Botão com função -->
+   
 </div>
+
+
+
+
+
 
 <div id="iframeContainer">
     <iframe id="iframe" src=""></iframe> <!-- Iframe para carregar a página -->
@@ -330,7 +384,7 @@
 <script>
     function abrirLink() {
         // Define o link que você deseja carregar
-        const url = 'https://pt.wikipedia.org/'; // Altere para o link desejado
+        const url = 'https://andyama-24.github.io/testpage/'; // Altere para o link desejado
         
         // Define a URL do iframe e exibe o container
         document.getElementById('iframe').src = url; // Define o src do iframe
@@ -368,5 +422,5 @@
     }
 </script>
 </body>
-        <footer></footer>
+<footer></footer>
 </html>
